@@ -331,6 +331,11 @@
 
     footer {
         margin-top: 50px;
+
+        @media (max-width: 500px) {
+            // Ensures the footer is still visible when search box moves to bottom
+            margin-bottom: 175px; 
+        }
     }
 
     a {
@@ -532,8 +537,20 @@
                     display: inline-block;
                     padding: 5px;
                     margin-right: 10px;
+                    white-space: nowrap;
                 }
             }
+        }
+
+        @media (max-width: 500px) {
+            // Fixes the search box (and options) to bottom of viewport on mobile
+            position: fixed;
+            bottom: 0;
+            top: auto;
+            margin: 0;
+            left: 0;
+            right: 0;
+            padding: 8px;
         }
     }
 
